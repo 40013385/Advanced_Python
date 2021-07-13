@@ -94,14 +94,14 @@ class Menu:
         return self.cost
 
 class Selection(Menu):
-    """A dummy docstring."""
+    """Declaring menu options and price"""
     def __init__(self, option):
-        """A dummy docstring."""
+        """Menu option and price."""
         self.option = option
         self.price = 0
 
     def choose(self):
-        """A dummy docstring."""
+        """Items in the Menu defined"""
         print("1. sweetcornsoup")
         print("2. garlicbread")
         print("3. paneerpizza")
