@@ -7,7 +7,7 @@ Bill for the order is calculated automatically instead of manually.
 class Cafe:
     """Details of customer, table number"""
     def __init__(self):
-        """A dummy docstring."""
+        """Details defined"""
         self.cust_name = 2
         self.no_of_people = 3
         self.table_no = 4
@@ -15,7 +15,7 @@ class Cafe:
         self.quan = None
 
     def customer(self):
-        """Give inputs"""
+        """Give inputs of customer, people with the customer and table """
         print("Enter name of the customer: ")
         self.cust_name = input()
         print("Enter no. of people: ")
@@ -23,8 +23,14 @@ class Cafe:
         print("Enter the table no assigned: ")
         self.table_no = input()
 
+
 class Menu:
     """Items in the Menu defined with price and billing calculation"""
+    def __init__(self):
+        """Details of cost and quantity defined"""
+        self.cost = None
+        self.quan = None
+
     def sweetcornsoup(self):
         """Provide input and totalling is done"""
         print("Enter the quantity: ")
@@ -38,60 +44,70 @@ class Menu:
         self.quan = int(input())
         self.cost = self.quan * 120
         return self.cost
+
     def paneerpizza(self):
         """Provide input and totalling is done"""
         print("Enter the quantity: ")
         self.quan = int(input())
         self.cost = self.quan * 220
         return self.cost
+
     def paneer65(self):
         """Provide input and totalling is done"""
         print("Enter the quantity: ")
         self.quan = int(input())
         self.cost = self.quan * 150
         return self.cost
+
     def paneertikka(self):
         """Provide input and totalling is done"""
         print("Enter the quantity: ")
         self.quan = int(input())
         self.cost = self.quan * 200
         return self.cost
+
     def honeychillypotato(self):
         """Provide input and totalling is done"""
         print("Enter the quantity: ")
         self.quan = int(input())
         self.cost = self.quan * 100
         return self.cost
+
     def babycornfry(self):
         """Provide input and totalling is done"""
         print("Enter the quantity: ")
         self.quan = int(input())
         self.cost = self.quan * 150
         return self.cost
+
     def crispycorn(self):
         """Provide input and totalling is done"""
         print("Enter the quantity: ")
         self.quan = int(input())
         self.cost = self.quan * 120
         return self.cost
+
     def alootikki(self):
         """Provide input and totalling is done"""
         print("Enter the quantity: ")
         self.quan = int(input())
         self.cost = self.quan * 150
         return self.cost
+
     def manchurian(self):
         """Provide input and totalling is done"""
         print("Enter the quantity: ")
         self.quan = int(input())
         self.cost = self.quan * 150
         return self.cost
+
     def frenchfries(self):
         """Provide input and totalling is done"""
         print("Enter the quantity: ")
         self.quan = int(input())
         self.cost = self.quan * 100
         return self.cost
+
 
 class Selection(Menu):
     """Declaring menu options and price"""
@@ -145,6 +161,7 @@ class Selection(Menu):
             except Exception as error:
                 print("Error: Not valid food option", error)
                 print("Please provide integer food item number")
+
 
 obj1 = Menu()
 obj2 = Cafe()
